@@ -12,9 +12,9 @@ namespace AspNetCoreMvc.Controllers
         public IActionResult Index()
         {
             var escuela = new Escuela();
-            escuela.AnoFundacion = 2005;
+            escuela.AñoDeCreación = 2005;
             escuela.Nombre = "Platzi";
-            escuela.EscuelaId = Guid.NewGuid().ToString();
+            escuela.UniqueId = Guid.NewGuid().ToString();
             ViewBag.otraPropiedad = "Soy una propiedad ViewBag :D";
             return View(escuela);
         }
