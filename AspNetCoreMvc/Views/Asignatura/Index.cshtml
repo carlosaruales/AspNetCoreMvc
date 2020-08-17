@@ -1,0 +1,13 @@
+﻿@model Asignatura
+
+@{
+    ViewData["Title"] = "Información Asignaturas";
+    Layout = "_LayoutCustom";
+}
+
+<h1> Asignatura: @Model.Nombre</h1>
+<div>
+    <p> Cód: @Model.UniqueId</p>
+    <p>Otra propiedad - Forma 1: @ViewBag.otraPropiedad</p>
+    <p>Otra propiedad - Forma 2: @ViewData["otraPropiedad"]</p>
+</div>
