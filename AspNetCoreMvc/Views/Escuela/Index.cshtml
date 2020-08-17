@@ -2,8 +2,11 @@
 
 @{
     ViewData["Title"] = "Información escuela";
+    Layout = "_LayoutCustom";
 }
 
 <h1> Escuela </h1>
 <h3> Nombre: @Model.Nombre</h3>
 <h3> Año fundación: @Model.AnoFundacion</h3>
+<p>Otra propiedad - Forma 1: @ViewBag.otraPropiedad</p>
+<p>Otra propiedad - Forma 2: @ViewData["otraPropiedad"]</p>

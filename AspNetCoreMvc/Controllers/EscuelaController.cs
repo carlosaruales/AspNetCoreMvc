@@ -15,6 +15,7 @@ namespace AspNetCoreMvc.Controllers
             escuela.AnoFundacion = 2005;
             escuela.Nombre = "Platzi";
             escuela.EscuelaId = Guid.NewGuid().ToString();
+            ViewBag.otraPropiedad = "Soy una propiedad ViewBag :D";
             return View(escuela);
         }
     }
