@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AspNetCoreMvc.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,13 +10,30 @@ namespace AspNetCoreMvc.Controllers
     {
         public IActionResult Index()
         {
-            Asignatura asignatura = new Asignatura
-            {
-                Nombre = "Inglés",
-                UniqueId = Guid.NewGuid().ToString()
+            List<Asignatura> listAsignaturas = new List<Asignatura>() {
+                new Asignatura {
+                    Nombre = "Inglés",
+                    UniqueId = Guid.NewGuid().ToString()
+                },
+                new Asignatura {
+                    Nombre = "Español",
+                    UniqueId = Guid.NewGuid().ToString()
+                },
+                new Asignatura {
+                    Nombre = "Francés",
+                    UniqueId = Guid.NewGuid().ToString()
+                },
+                new Asignatura {
+                    Nombre = "Portugues",
+                    UniqueId = Guid.NewGuid().ToString()
+                },
+                new Asignatura {
+                    Nombre = "Latin",
+                    UniqueId = Guid.NewGuid().ToString()
+                }
             };
 
-            return View(asignatura);
+            return View("MultiAsignatura",listAsignaturas);
         }
     }
 }

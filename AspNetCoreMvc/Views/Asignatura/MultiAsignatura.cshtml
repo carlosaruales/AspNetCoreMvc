@@ -1,0 +1,12 @@
+﻿@model List<Asignatura>
+
+@{
+    ViewData["Title"] = "Información Asignaturas";
+    Layout = "_LayoutCustom";
+}
+
+@foreach(var asignatura in Model)
+{
+    <partial name="AsignaturaSimple" model="asignatura"></partial>
+}
+
