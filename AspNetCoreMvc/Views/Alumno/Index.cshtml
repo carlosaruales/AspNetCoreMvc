@@ -1,11 +1,11 @@
-﻿@model Asignatura
+﻿@model Alumno
 
 @{
-    ViewData["Title"] = "Información Asignaturas";
+    ViewData["Title"] = "Información Alumnos";
     Layout = "_LayoutCustom";
 }
 
-<h1> Asignatura: @Model.Nombre</h1>
+<h1> Alumno: @Model.Nombre</h1>
 <div>
     <p> Cód: @Model.UniqueId</p>
     <p>Otra propiedad - Forma 1: @ViewBag.otraPropiedad</p>
