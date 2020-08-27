@@ -13,23 +13,23 @@ namespace AspNetCoreMvc.Controllers
             List<Alumno> listAlumno = new List<Alumno>() {
                 new Alumno {
                     Nombre = "Pedro",
-                    UniqueId = Guid.NewGuid().ToString()
+                    Id = Guid.NewGuid().ToString()
                 },
                 new Alumno {
                     Nombre = "Carlos",
-                    UniqueId = Guid.NewGuid().ToString()
+                    Id = Guid.NewGuid().ToString()
                 },
                 new Alumno {
                     Nombre = "Pepe",
-                    UniqueId = Guid.NewGuid().ToString()
+                    Id = Guid.NewGuid().ToString()
                 },
                 new Alumno {
                     Nombre = "Andrés",
-                    UniqueId = Guid.NewGuid().ToString()
+                    Id = Guid.NewGuid().ToString()
                 },
                 new Alumno {
                     Nombre = "Evanisto",
-                    UniqueId = Guid.NewGuid().ToString()
+                    Id = Guid.NewGuid().ToString()
                 }
             };
 
