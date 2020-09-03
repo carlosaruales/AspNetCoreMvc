@@ -17,8 +17,15 @@ namespace AspNetCoreMvc.Controllers
         }
         public IActionResult Index()
         {
-            var asignaturas = _context.Asignaturas.ToList();
-            return View("MultiAsignatura", asignaturas);
+            return View(_context.Asignaturas.FirstOrDefault());
+        }
+
+
+        public IActionResult MultiAsignatura()
+        {
+            ViewBag.CosaDinamica = "La Monja";
+            ViewBag.Fecha = DateTime.Now;
+            return View("MultiAsignatura", _context.Asignaturas);
         }
     }
 }
