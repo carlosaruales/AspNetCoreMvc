@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AspNetCoreMvc.Controllers
 {
-    public class AlumnoController : Controller
+    public class CursoController : Controller
     {
         private EscuelaContext _context;
 
-        public AlumnoController(EscuelaContext Escuela)
+        public CursoController(EscuelaContext Escuela)
         {
             _context = Escuela;
         }
@@ -20,23 +20,22 @@ namespace AspNetCoreMvc.Controllers
         {
             if (!String.IsNullOrEmpty(id))
             {
-                var alumno = from asig in _context.Alumnos
-                                 where asig.Id == id
-                             select asig;
-                return View(alumno.SingleOrDefaultAsync());
-            }
-            else
+                var cursos = from curso in _context.Curso
+                                 where curso.Id == id
+                                 select curso;
+                return View(cursos.SingleOrDefaultAsync());
+            } else
             {
-                return View("MultiAlumno", _context.Alumnos);
+                return View("MultiAsignatura", _context.Curso);
             }
         }
 
-        public IActionResult MultiAsignatura()
+
+        public IActionResult MultiCurso()
         {
             ViewBag.CosaDinamica = "La Monja";
             ViewBag.Fecha = DateTime.Now;
-            return View("MultiAlumno", _context.Alumnos);
+            return View("MultiCurso", _context.Curso);
         }
-
     }
 }
