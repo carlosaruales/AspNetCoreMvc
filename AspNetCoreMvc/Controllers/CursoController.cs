@@ -46,12 +46,21 @@ namespace AspNetCoreMvc.Controllers
         [HttpPost]
         public IActionResult Create(Curso curso)
         {
-            var escuela = _context.Escuelas.FirstOrDefault();
-            curso.Escuela.Id = escuela.Id;
-            _context.Curso.Add(curso);
-            _context.SaveChanges();
+            if(ModelState.IsValid)
+            {
+                var escuela = _context.Escuelas.FirstOrDefault();
+                curso.Escuela.Id = escuela.Id;
+                _context.Curso.Add(curso);
+                _context.SaveChanges();
+                return View("Index",curso);
+            }
+            else
+            {
+                return View(curso);
+            }
+            
 
-            return View();
+            
         }
 
 
